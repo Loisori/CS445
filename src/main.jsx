@@ -7,12 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // const Header = lazy(() => import("./sections/Header.jsx"));
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <>
-    </>
-  );
+  return <></>;
 }
 
 createRoot(document.getElementById("root")).render(
