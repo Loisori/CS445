@@ -1,0 +1,14 @@
+.container{
+    @apply max-w-screen-[1440px] w-full m-auto px-[30px]
+}
+@screen md {
+    .container{
+        @apply px-5;
+    }
+}
+
+@screen lg {
+    .container{
+        @apply px-5;
+    }
+}

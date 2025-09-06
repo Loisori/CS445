@@ -1,0 +1,251 @@
+.wrapper {
+  @apply max-w-[144rem] px-[1.6rem] w-full m-auto;
+  /* For 'md' breakpoint (768px) */
+}
+@media (min-width: 960px) {
+  .wrapper {
+    @apply px-[2rem];
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    @apply px-[10rem];
+  }
+}
+
+html {
+  font-size: 62.5%;
+  @apply max-h-screen;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  @apply py-[4.8rem];
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-primary;
+}
+
+p,
+span {
+  @apply text-secondary;
+}
+
+h1 {
+  @apply text-h2 lg:text-h1 font-bold leading-base tracking-tighter;
+}
+
+h2 {
+  @apply text-h2 font-bold leading-base;
+}
+
+h3 {
+  @apply text-h3 font-bold;
+}
+
+h4 {
+  @apply text-h4 font-bold;
+}
+
+h5 {
+  @apply text-h5;
+}
+
+p,
+span {
+  @apply text-body;
+}
+
+.animation-fade-up {
+  @apply opacity-0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, all 0.3s ease-out, border 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+.animation-fade-up.is-fade-up {
+  @apply opacity-100;
+  transform: translateY(0);
+}
+.animation-fade-right {
+  @apply opacity-0;
+  transform: translateX(-20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, all 0.3s ease-out;
+}
+.animation-fade-right.is-fade-right {
+  @apply opacity-100;
+  transform: translateX(0);
+}
+.animation-fade-left {
+  @apply opacity-0;
+  transform: translateX(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, all 0.3s ease-out;
+}
+.animation-fade-left.is-fade-left {
+  @apply opacity-100;
+  transform: translateX(0);
+}
+.animation-pop-up {
+  @apply opacity-0;
+  transform: scale(0.8); /* Initial small state */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out, all 0.3s ease-out;
+}
+.animation-pop-up.is-pop-up {
+  @apply opacity-100;
+  transform: scale(1);
+}
+
+.effect-underline {
+  @apply relative;
+}
+.effect-underline::after {
+  @apply content-[""] absolute left-0 bottom-0 inline-block h-[.2rem] w-full opacity-0;
+  border-bottom: 1px solid;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+.effect-underline:hover::after {
+  @apply opacity-100;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.table {
+  @apply text-body;
+}
+.table th,
+.table td {
+  @apply p-[.8rem] text-left;
+}
+.table tr {
+  @apply border-b border-solid border-[#dee2e6];
+}
+
+.button--primary {
+  @apply px-[4.8rem] py-[2.4rem] bg-[#212529] text-white text-body w-fit cursor-pointer hover:bg-[#3f4449] transition-all duration-300;
+}
+
+#nav-icon3 {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #212529;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 12px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 24px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+
+.embla {
+  @apply overflow-hidden w-full py-[2.4rem];
+}
+.embla__container {
+  @apply flex flex-nowrap gap-[3rem];
+}
+.embla__slide {
+  flex: 0 0 360px;
+  @apply w-[36rem] overflow-hidden;
+}
+
+.form__input {
+  @apply block w-full px-[1.2rem] py-[.6rem] font-normal leading-normal text-body text-[#333] bg-white border border-solid border-[#dee2e6] rounded-[.6rem];
+}
+
+.nav--link {
+  @apply border-b-[1px] block border-[#dee2e6] relative;
+}
+.nav--link::before {
+  @apply bg-black content-[""] absolute bottom-[-1px] h-[.1rem] w-0 transition-[width] duration-600 ease-out;
+}
+.nav--link:hover::before {
+  @apply w-full;
+}
+.nav--link.active::before {
+  @apply w-full;
+}
+
+/*# sourceMappingURL=compiled.css.map */
