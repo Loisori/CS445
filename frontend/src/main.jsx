@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // const Header = lazy(() => import("./sections/Header.jsx"));
 
 function App() {
-  return <></>;
+  return <>{/* <example /> */}</>;
 }
 
 createRoot(document.getElementById("root")).render(
