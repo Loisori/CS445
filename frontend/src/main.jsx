@@ -18,17 +18,15 @@ const InvestorLogin = lazy(() => import("./pages/login/InvestorLogin.jsx"));
 function App() {
   return (
     <>
-      <Router>
+      <BrowserRouter>
         <MainLayout>
           <Routes>
-            <Route path="/" />
-            <Route path="" />
-            <Route path="" />
-            <Route path="" />
-            <Route path="" />
+            <Route path="/" element={<Home />} />
+            <Route path="/investorlogin" element={<InvestorLogin />} />
+            <Route path="/POlogin" element={<POLogin />} />
           </Routes>
         </MainLayout>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }

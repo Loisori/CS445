@@ -8,14 +8,13 @@
 
   /* Font sizes */
   --text-smallest: 1.2rem;
-  --text-small: 1.8rem;
-  --text-body: 1.5rem;
-  --text-h6: 1.8rem;
-  --text-h5: 2rem;
-  --text-h4: 2.8rem;
-  --text-h3: 5.6rem;
-  --text-h2: 8rem;
-  --text-h1: 15rem;
+  --text-small: 1.3rem;
+  --text-h6: 1.4rem;
+  --text-h5: 1.6rem;
+  --text-h4: 1.8rem;
+  --text-h3: 2rem;
+  --text-h2: 2.8rem;
+  --text-h1: 3.4rem;
 
   /* Colors */
   --color-primary: #212529;
@@ -23,6 +22,7 @@
   --color-tertiary: #212529bf;
   --color-white: #ffffff;
   --color-transparent: transparent;
+  --color-gray: #656969 ;
 
   /* Radius */
   --radius-0: 0;

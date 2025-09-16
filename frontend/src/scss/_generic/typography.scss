@@ -7,7 +7,7 @@ h6,
 p,
 a,
 span {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h1,
@@ -24,21 +24,17 @@ span {
   @apply text-secondary;
 }
 h1 {
-  @apply text-h2 lg:text-h1 font-bold leading-base tracking-tighter;
+  @apply text-h1 lg:text-h1 leading-base tracking-tighter;
 }
 h2 {
-  @apply text-h2 font-bold leading-base;
+  @apply text-h2 leading-base;
 }
 h3 {
-  @apply text-h3 font-bold;
+  @apply text-h3;
 }
 h4 {
-  @apply text-h4 font-bold;
+  @apply text-h4;
 }
 h5 {
   @apply text-h5;
-}
-p,
-span {
-  @apply text-body;
 }

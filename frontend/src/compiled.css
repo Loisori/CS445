@@ -27,6 +27,10 @@ section {
   @apply py-[4.8rem];
 }
 
+img {
+  @apply size-full;
+}
+
 h1,
 h2,
 h3,
@@ -36,7 +40,7 @@ h6,
 p,
 a,
 span {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h1,
@@ -54,28 +58,23 @@ span {
 }
 
 h1 {
-  @apply text-h2 lg:text-h1 font-bold leading-base tracking-tighter;
+  @apply text-h1 lg:text-h1 leading-base tracking-tighter;
 }
 
 h2 {
-  @apply text-h2 font-bold leading-base;
+  @apply text-h2 leading-base;
 }
 
 h3 {
-  @apply text-h3 font-bold;
+  @apply text-h3;
 }
 
 h4 {
-  @apply text-h4 font-bold;
+  @apply text-h4;
 }
 
 h5 {
   @apply text-h5;
-}
-
-p,
-span {
-  @apply text-body;
 }
 
 .animation-fade-up {
@@ -133,7 +132,7 @@ span {
 }
 
 .table {
-  @apply text-body;
+  @apply text-h5;
 }
 .table th,
 .table td {
@@ -144,7 +143,7 @@ span {
 }
 
 .button--primary {
-  @apply px-[4.8rem] py-[2.4rem] bg-[#212529] text-white text-body w-fit cursor-pointer hover:bg-[#3f4449] transition-all duration-300;
+  @apply px-[4.8rem] py-[2.4rem] bg-[#212529] text-white w-fit cursor-pointer hover:bg-[#3f4449] transition-all duration-300;
 }
 
 #nav-icon3 {
@@ -232,7 +231,7 @@ span {
 }
 
 .form__input {
-  @apply block w-full px-[1.2rem] py-[.6rem] font-normal leading-normal text-body text-[#333] bg-white border border-solid border-[#dee2e6] rounded-[.6rem];
+  @apply block w-full px-[1.2rem] py-[.6rem] font-normal leading-normal text-h5 text-[#333] bg-white border border-solid border-[#dee2e6] rounded-[.6rem];
 }
 
 .nav--link {
