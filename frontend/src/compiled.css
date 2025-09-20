@@ -58,7 +58,7 @@ span {
 }
 
 h1 {
-  @apply text-h1 lg:text-h1 leading-base tracking-tighter;
+  @apply text-h1 leading-base;
 }
 
 h2 {
@@ -75,6 +75,10 @@ h4 {
 
 h5 {
   @apply text-h5;
+}
+
+h6 {
+  @apply text-h6;
 }
 
 .animation-fade-up {
@@ -143,10 +147,10 @@ h5 {
 }
 
 .button--primary {
-  @apply px-[2.4rem] py-[1.2rem] bg-tertiary text-white rounded-[.5rem] w-fit cursor-pointer hover:bg-[#3f4449] transition-all duration-300;
+  @apply px-[2.4rem] py-[1.2rem] bg-tertiary text-white text-h6 rounded-[.5rem] w-fit cursor-pointer hover:bg-[#3f4449] transition-all duration-300;
 }
 .button--secondary {
-  @apply px-[2.4rem] py-[1.2rem] bg-white text-black rounded-[.5rem] border-[0.1rem] border-[#E0DBDB] w-fit cursor-pointer hover:bg-[#f8f9fa] transition-all duration-300;
+  @apply px-[2.4rem] py-[1.2rem] bg-white text-black text-h6 rounded-[.5rem] border-[0.1rem] border-[#E0DBDB] w-fit cursor-pointer hover:bg-[#f8f9fa] transition-all duration-300;
 }
 
 .embla {

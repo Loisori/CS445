@@ -13,7 +13,7 @@ function Header() {
           </div>
         </Link>
         <div>
-          <ul className="flex gap-[3.2rem]">
+          <ul className="flex gap-[3.2rem] text-h4">
             <li>Dự án</li>
             <li>Giới thiệu</li>
             <li>Liên hệ</li>

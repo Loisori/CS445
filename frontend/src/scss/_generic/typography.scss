@@ -24,7 +24,7 @@ span {
   @apply text-black;
 }
 h1 {
-  @apply text-h1 lg:text-h1 leading-base tracking-tighter;
+  @apply text-h1 leading-base;
 }
 h2 {
   @apply text-h2 leading-base;
@@ -37,4 +37,7 @@ h4 {
 }
 h5 {
   @apply text-h5;
+}
+h6 {
+  @apply text-h6;
 }
