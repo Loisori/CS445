@@ -7,22 +7,23 @@
   --font-heading: "Roboto", sans-serif;
 
   /* Font sizes */
-  --text-smallest: 1.2rem;
-  --text-small: 1.3rem;
-  --text-h6: 1.4rem;
-  --text-h5: 1.6rem;
-  --text-h4: 1.8rem;
-  --text-h3: 2rem;
-  --text-h2: 2.8rem;
-  --text-h1: 3.4rem;
+  --text-smallest: 0.8rem;
+  --text-smaller: 1rem;
+  --text-small: 1.4rem;
+  --text-h6: 1.6rem;
+  --text-h5: 2rem;
+  --text-h4: 2.5rem;
+  --text-h3: 3rem;
+  --text-h2: 5rem;
+  --text-h1: 6.5rem;
 
   /* Colors */
-  --color-primary: #F8FDF7;
-  --color-secondary: #F1FCF0;
-  --color-tertiary: #0A6802;
+  --color-primary: #f8fdf7;
+  --color-secondary: #f1fcf0;
+  --color-tertiary: #0a6802;
   --color-white: #ffffff;
   --color-transparent: transparent;
-  --color-gray: #656969 ;
+  --color-gray: #656969;
 
   /* Radius */
   --radius-0: 0;
