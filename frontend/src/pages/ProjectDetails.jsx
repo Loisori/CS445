@@ -1,5 +1,5 @@
-function ProjectDetails() {
-  return <div>Project Details Page</div>;
-}
+// function ProjectDetails() {
+//   return <div>Project Details Page</div>;
+// }
 
-export default ProjectDetails;
+// export default ProjectDetails;s

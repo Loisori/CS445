@@ -12,8 +12,8 @@ const Footer = lazy(() => import("./sections/Footer.jsx"));
 const Home = lazy(() => import("./pages/Home.jsx"));
 
 //login
-const POLogin = lazy(() => import("./pages/login/POLogin.jsx"));
-const InvestorLogin = lazy(() => import("./pages/login/InvestorLogin.jsx"));
+const Login = lazy(() => import("./pages/login/Login.jsx"));
+const Register = lazy(() => import("./pages/login/Register.jsx"));
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
         <MainLayout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/investorlogin" element={<InvestorLogin />} />
-            <Route path="/POlogin" element={<POLogin />} />
+            <Route path="/login" element={<Register />} />
+            <Route path="/register" element={<Login />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
