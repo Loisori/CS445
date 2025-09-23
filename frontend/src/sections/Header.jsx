@@ -1,6 +1,5 @@
-import Logo from "../assets/imgs/logo.png";
-
 import { Link } from "react-router-dom";
+import Logo from "../assets/imgs/logo.png";
 
 function Header() {
   return (
@@ -8,8 +7,10 @@ function Header() {
       <div className="wrapper flex justify-between items-center py-[2.4rem]">
         <Link to="/">
           <div className="flex gap-[1rem]">
-            <picture className="size-[5rem]"><img src={Logo} alt="" /></picture>
-            <p className="my-auto">InvestPro</p>
+            <picture className="size-[5rem]">
+              <img src={Logo} alt="" />
+            </picture>
+            <p className="my-auto text-h3 font-bold">InvestPro</p>
           </div>
         </Link>
         <div>
@@ -19,11 +20,11 @@ function Header() {
             <li>Liên hệ</li>
           </ul>
         </div>
-        <div className="flex gap-[3.2rem]">
-          <Link to="/login">
+        <div className="flex gap-[3.2rem] text-h6">
+          <Link to="/Register">
             <button className="button--secondary">Đăng nhập</button>
           </Link>
-          <Link to="/register">
+          <Link to="/Login">
             <button className="button--primary">Đăng ký</button>
           </Link>
         </div>

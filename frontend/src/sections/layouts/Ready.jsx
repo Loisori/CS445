@@ -1,12 +1,19 @@
 function Ready() {
   return (
-    <section >
+    <section>
       <div className="wrapper">
-        <h2 className="my-[3rem] text-center">Sẵn sàng bắt đầu hành trình đầu tư</h2>
-        <p className="text-center ">
-          Tham gia cùng hàng nghìn nhà đầu tư và chủ dự án đã tin tưởng InvestPro
-        </p>
-        <button className="button--primary mx-auto mt-[2rem] block">Đăng ký miễn phí</button>
+        <div className="bg-tertiary py-[4rem] rounded-[2rem]">
+          <h2 className="my-[3rem] text-center text-white!">
+            Sẵn sàng bắt đầu hành trình đầu tư
+          </h2>
+          <p className="text-center text-h3 text-white!">
+            Tham gia cùng hàng nghìn nhà đầu tư và chủ dự án đã tin tưởng
+            InvestPro
+          </p>
+          <button className="button--primary bg-[#B4B52D]! mx-auto mt-[2rem] block text-h6">
+            Đăng ký miễn phí
+          </button>
+        </div>
       </div>
     </section>
   );

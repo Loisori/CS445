@@ -8,7 +8,7 @@ function Hero() {
             Kết nối nhà đầu tư và chủ dự án một cách hiệu quả. Quản lý đầu tư
             thông minh với công nghệ hiện đại.
           </p>
-          <div className="flex justify-center gap-[2rem]">
+          <div className="flex justify-center gap-[2rem] text-h6">
             <button className="button--primary">Bắt đầu ngay</button>
             <button className="button--secondary">Khám phá dự án</button>
           </div>
