@@ -21,10 +21,10 @@ function Header() {
           </ul>
         </div>
         <div className="flex gap-[3.2rem] text-h6">
-          <Link to="/Register">
+          <Link to="/Login">
             <button className="button--secondary">Đăng nhập</button>
           </Link>
-          <Link to="/Login">
+          <Link to="/Register">
             <button className="button--primary">Đăng ký</button>
           </Link>
         </div>
