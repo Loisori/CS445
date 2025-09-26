@@ -15,7 +15,9 @@ function Header() {
         </Link>
         <div>
           <ul className="flex gap-[3.2rem] text-h4">
-            <li>Dự án</li>
+            <Link to="/Project">
+              <li>Dự án</li>
+            </Link>
             <li>Giới thiệu</li>
             <li>Liên hệ</li>
           </ul>

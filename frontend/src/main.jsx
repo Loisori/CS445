@@ -10,6 +10,7 @@ const Footer = lazy(() => import("./sections/Footer.jsx"));
 
 //pages
 const Home = lazy(() => import("./pages/Home.jsx"));
+const Project = lazy(() => import("./pages/Projects.jsx"));
 
 //login
 const Login = lazy(() => import("./pages/login/Login.jsx"));
@@ -24,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/project" element={<Project />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
