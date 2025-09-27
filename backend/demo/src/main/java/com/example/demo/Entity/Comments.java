@@ -3,6 +3,7 @@ package com.example.demo.Entity;
 import com.example.demo.DTO.Project;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Comments")
+@Builder
 public class Comments {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

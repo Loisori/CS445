@@ -1,20 +1,22 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.Sercive.impl;
 
 import com.example.demo.Entity.Categories;
-
 import java.util.List;
 
-
 public interface CategoryServiceimpl {
-    public void SaveCategory(Categories category);
+    void SaveCategory(Categories category);
 
-    public boolean ExistCategory(String category);
+    boolean ExistCategory(String category);
 
-    public List<Categories> getAllCategories();
+    List<Categories> getAllCategories();
 
-    public Categories getCategory(Long categoryId);
+    Categories getCategory(Long categoryId);
 
-    public void deleteCategory(Long id);
-
-
+    void deleteCategory(Long id);
+     Categories findByID(Long id);
 }

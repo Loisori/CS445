@@ -1,52 +1,52 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.Sercive;
 
 import com.example.demo.Entity.Users;
 import com.example.demo.Repository.UserRepository;
 import com.example.demo.Sercive.impl.UserServiceimpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-
 @Service
+@RequiredArgsConstructor
 public class UserService implements UserServiceimpl {
-    @Override
+
+    private final UserRepository userRepository;
+
+
+
     public Users getUserById(Long id) {
-        return userRepository.findById(id).orElse(null);
+        return (Users)this.userRepository.findById(id).orElse(null);
     }
 
-    @Autowired
-    private UserRepository userRepository;
-
-    @Override
     public List<Users> getAllUsers() {
-        return userRepository.findAll();
+        return this.userRepository.findAll();
     }
 
-    @Override
     public void SaveUser(Users user) {
-        userRepository.save(user);
+        this.userRepository.save(user);
     }
 
-    @Override
     public Users getUserByUsername(String username) {
-        return userRepository.findByUsername(username);
+        return this.userRepository.findByUsername(username);
     }
 
-    @Override
     public Boolean ExistUser(String username) {
-        return userRepository.existsByUsername(username);
+        return this.userRepository.existsByUsername(username);
     }
 
-    @Override
     public Boolean ExitEmail(String email) {
-        return userRepository.existsByEmail(email);
+        return this.userRepository.existsByEmail(email);
     }
 
-    @Override
     public Users getUserByEmail(String email) {
-        return userRepository.findByEmail(email);
+        return this.userRepository.findByEmail(email);
     }
 }

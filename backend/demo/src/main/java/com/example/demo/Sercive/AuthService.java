@@ -1,36 +1,41 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.Sercive;
 
 import com.example.demo.Entity.Role;
 import com.example.demo.Repository.RoleRepository;
 import com.example.demo.Sercive.impl.AuthServiceimpl;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 @Service
+@RequiredArgsConstructor
 public class AuthService implements AuthServiceimpl {
-    @Autowired
-    private RoleRepository roleRepository;
 
-    @Override
+    private final RoleRepository roleRepository;
+
+
     public List<Role> GetAllRole() {
-        return roleRepository.findAll();
+        return this.roleRepository.findAll();
     }
 
-    @Override
     public void SaveRole(Role role) {
-        roleRepository.save(role);
+        this.roleRepository.save(role);
     }
 
-    @Override
     public Role GetRoleById(Long id) {
-        return roleRepository.findById(id).orElse(null);
+        return (Role) this.roleRepository.findById(id).orElse(null);
     }
 
-    @Override
     public Optional<Role> GetRoleByName(String roleName) {
-        return roleRepository.findByname(roleName);
+        return this.roleRepository.findByname(roleName);
     }
 }

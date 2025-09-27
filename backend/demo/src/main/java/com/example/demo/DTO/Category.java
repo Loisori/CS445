@@ -1,11 +1,19 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.DTO;
 
 public class Category {
     private String categoryName;
     private String description;
 
+    public Category() {
+    }
+
     public String getCategoryName() {
-        return categoryName;
+        return this.categoryName;
     }
 
     public void setCategoryName(String categoryName) {
@@ -13,7 +21,7 @@ public class Category {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {

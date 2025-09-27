@@ -1,18 +1,31 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.Sercive.impl;
 
 import com.example.demo.Entity.Projects;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 public interface ProjectsServiceimpl {
-    public List<Projects> GetAllProjects();
+    List<Projects> GetAllProjects();
 
-    public Projects GetidProject(Long id);
+    Projects GetidProject(Long id);
 
-    public void SaveProject(Projects project);
+    void SaveProject(Projects project);
 
-    public void DeleteProject(Long id);
+    void DeleteProject(Long id);
 
-    public List<Projects> SearchProject(String title);
+    List<Projects> SearchProject(String title);
+
+    void deleteIDcategory(Long id);
+
+    void updateIDcategory(Long id);
+
+    List<Projects> getMyProjects(Long id);
+
+    List<Projects> getProjectFail(LocalDateTime now,Projects.statusprojects status);
 }

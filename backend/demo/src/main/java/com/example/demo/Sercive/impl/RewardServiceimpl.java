@@ -1,17 +1,25 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.Sercive.impl;
 
 import com.example.demo.Entity.Reward;
-
 import java.util.List;
 
 public interface RewardServiceimpl {
-    public void SaveReward(Reward reward);
+    void SaveReward(Reward reward);
 
-    public Reward GetReward(String title);
+    Reward GetReward(String title);
 
-    public void DeleteReward(Long id);
-    public Boolean existReward(String title);
-    public Reward getRewardId(Long id);
-public List<Reward> getAllReward();
+    void DeleteReward(Long id);
 
+    Boolean existReward(String title);
+
+    Reward getRewardId(Long id);
+
+    List<Reward> getAllReward();
+
+    void deleteProjects(Long id);
 }

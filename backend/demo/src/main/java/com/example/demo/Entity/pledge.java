@@ -2,6 +2,7 @@ package com.example.demo.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 
@@ -11,23 +12,43 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "pledge")
+@Builder
 public class pledge {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pledgeId;
 
+    public enum PledgeStatus {
+        PENDING,   // vừa tạo, chờ thanh toán
+        PAID,      // đã thanh toán thành công
+        CANCELLED,  // user hủy pledge
+        REFUND
+    }
+
     private Double amount;
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private PledgeStatus status;
     private LocalDateTime createdAt;
     @ManyToOne
-    @JoinColumn(name = "investor_id",nullable = false)
+    @JoinColumn(name = "investor_id", nullable = false)
     private Users investor;
     @ManyToOne
-    @JoinColumn(name = "Project_id",nullable = false)
+    @JoinColumn(name = "Project_id", nullable = false)
     private Projects project;
     @ManyToOne
-    @JoinColumn(name = "Reward_id",nullable = false)
+    @JoinColumn(name = "Reward_id", nullable = false)
     private Reward reward;
+    // số tiền còn lại
+
+    private Double remaining;
+
+    public Double getRemaining() {
+        return remaining;
+    }
+
+    public void setRemaining(Double remaining) {
+        this.remaining = remaining;
+    }
 
     public Double getAmount() {
         return amount;
@@ -77,11 +98,11 @@ public class pledge {
         this.reward = reward;
     }
 
-    public String getStatus() {
+    public PledgeStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(PledgeStatus status) {
         this.status = status;
     }
 }

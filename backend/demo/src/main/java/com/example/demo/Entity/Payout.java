@@ -3,6 +3,7 @@ package com.example.demo.Entity;
 import com.example.demo.DTO.Project;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -11,8 +12,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "Payout")
+@Builder
 public class Payout {
-
+public enum  statusPayout{
+    PENDING,
+    SUCCESS
+}
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long payoutId;
@@ -31,8 +36,8 @@ public class Payout {
 
     @Column(name = "payout_date")
     private LocalDateTime payoutDate;
-
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private statusPayout status;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt;
@@ -93,11 +98,11 @@ public class Payout {
         this.project = project;
     }
 
-    public String getStatus() {
+    public statusPayout getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(statusPayout status) {
         this.status = status;
     }
 

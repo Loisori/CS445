@@ -1,23 +1,25 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.Sercive.impl;
 
 import com.example.demo.Entity.Users;
-import org.springframework.security.core.userdetails.User;
-
 import java.util.List;
-import java.util.Optional;
 
 public interface UserServiceimpl {
-    public void SaveUser(Users user);
+    void SaveUser(Users user);
 
-    public List<Users> getAllUsers();
+    List<Users> getAllUsers();
 
-    public Users getUserByUsername(String username);
+    Users getUserByUsername(String username);
 
-    public Boolean ExistUser(String username);
+    Boolean ExistUser(String username);
 
-    public Boolean ExitEmail(String email);
+    Boolean ExitEmail(String email);
 
-    public Users getUserByEmail(String email);
+    Users getUserByEmail(String email);
 
-    public Users getUserById(Long id);
+    Users getUserById(Long id);
 }

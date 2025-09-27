@@ -2,6 +2,7 @@ package com.example.demo.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "Categories")
+@Builder
 public class Categories {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,8 +1,10 @@
 package com.example.demo.Entity;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
@@ -12,6 +14,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "Projects")
+@Builder
 public class Projects {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +24,11 @@ public class Projects {
 
     private String description;
     private Double goalAmount;
-    private Double pledgedAmount;
-    private Double collectedAmount;
-
-    private String status;
+    private Double pledgedAmount=0.0;
+    private Double collectedAmount=0.0;
+    @Enumerated(EnumType.STRING) // Hibernate sẽ lưu PENDING, OPEN... dạng chuỗi
+    @Column(name = "status")
+    private statusprojects status;
 
     private LocalDateTime createdAt;
 
@@ -39,7 +43,14 @@ public class Projects {
     public void setCreator(Users creator) {
         this.creator = creator;
     }
-
+public  enum  statusprojects{
+    PENDING,        // Đang chờ admin duyệt
+    OPEN,           // Đang gây quỹ (đã duyệt, trong thời gian gọi vốn)
+    SUCCESS,        // Gây quỹ thành công (đạt goalAmount trước endDate)
+    REJECTED,  // Bị từ chối
+    COMPLETED ,
+    FAILED// Hoàn thành
+}
     private String image;
     @ManyToOne
     @JoinColumn(name="Category_id",nullable = false)
@@ -128,11 +139,11 @@ public class Projects {
         this.startDate = startDate;
     }
 
-    public String getStatus() {
+    public statusprojects getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(statusprojects status) {
         this.status = status;
     }
 

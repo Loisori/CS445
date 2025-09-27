@@ -1,12 +1,15 @@
 package com.example.demo.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 
@@ -14,15 +17,18 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "Users")
+@SuperBuilder
+@Builder
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
-@NotBlank(message = "User không được để trống ")
-@Size(min = 7,message = "User phải dài hơn 7 kí tự ")
+    @NotBlank(message = "User không được để trống ")
+    @Size(min = 7, message = "User phải dài hơn 7 kí tự ")
     private String username;
-@NotBlank(message = "Password không đuược để trống")
-@Size(min = 10,message = "mật không không quá ngắn phải dài hơn 10 kí tự ")
+    @NotBlank(message = "Password không đuược để trống")
+    @Size(message = "mật không không quá ngắn phải dài hơn 10 kí tự ")
+    @JsonIgnore
     private String password;
     @NotBlank(message = "Không được bỏ trống ")
     @Email(message = "Email Chưa đúng định dạng")
@@ -30,6 +36,16 @@ public class Users {
     @NotBlank(message = " Không được bỏ trống ")
     @Size(min = 10, message = "Nhập số điện thoại chưa phù hợp ")
     private String phone;
+
+    public Double getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(Double wallet) {
+        this.wallet = wallet;
+    }
+
+    private Double wallet;
 
     private LocalDateTime createdAt;
 
@@ -91,6 +107,6 @@ public class Users {
     }
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "role_id",nullable = false)
+    @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 }

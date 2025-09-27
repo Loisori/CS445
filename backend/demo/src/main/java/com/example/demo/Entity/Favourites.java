@@ -1,10 +1,7 @@
 package com.example.demo.Entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -14,6 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Table(name = "Favourites")
+@Builder
 public class Favourites {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

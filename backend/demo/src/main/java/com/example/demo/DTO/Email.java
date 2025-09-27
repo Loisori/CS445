@@ -1,20 +1,27 @@
-package com.example.demo.DTO;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
 
+package com.example.demo.DTO;
 
 import jakarta.validation.constraints.NotEmpty;
 
 public class Email {
-    @jakarta.validation.constraints.Email(message = "email phải đúng định dạng")
-    @NotEmpty(message = "email không được để trống")
+    private @jakarta.validation.constraints.Email(
+            message = "email phải đúng định dạng"
+    ) @NotEmpty(
+            message = "email không được để trống"
+    ) String email;
 
-    private String email;
+    public Email() {
+    }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
-
 }

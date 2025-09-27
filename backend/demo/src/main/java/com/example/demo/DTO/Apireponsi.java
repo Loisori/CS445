@@ -1,8 +1,12 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.demo.DTO;
 
-import org.springframework.http.HttpStatus;
-
 import java.time.LocalDateTime;
+import org.springframework.http.HttpStatus;
 
 public class Apireponsi<T> {
     private String status;
@@ -11,18 +15,16 @@ public class Apireponsi<T> {
     private String errorCode;
     private LocalDateTime timestamp = LocalDateTime.now();
 
-    // Constructor có đối số
     public Apireponsi(HttpStatus httpStatus, String message, T data, String errorCode) {
         this.status = httpStatus.is2xxSuccessful() ? "success" : " error";
         this.message = message;
         this.data = data;
         this.errorCode = errorCode;
-        this.timestamp = timestamp;
+        this.timestamp = this.timestamp;
     }
 
-    // Getter và Setter
     public String getStatus() {
-        return status;
+        return this.status;
     }
 
     public void setStatus(String status) {
@@ -30,7 +32,7 @@ public class Apireponsi<T> {
     }
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 
     public void setMessage(String message) {
@@ -38,7 +40,7 @@ public class Apireponsi<T> {
     }
 
     public T getData() {
-        return data;
+        return this.data;
     }
 
     public void setData(T data) {
@@ -46,7 +48,7 @@ public class Apireponsi<T> {
     }
 
     public String getErrorCode() {
-        return errorCode;
+        return this.errorCode;
     }
 
     public void setErrorCode(String errorCode) {
@@ -54,9 +56,10 @@ public class Apireponsi<T> {
     }
 
     public LocalDateTime getTimestamp() {
-        return timestamp;
+        return this.timestamp;
     }
 
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
-    }}
+    }
+}
