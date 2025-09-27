@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { StrictMode, lazy, Suspense } from "react";
 
 const Hero = lazy(() => import("../sections/layouts/Hero"));
@@ -15,3 +16,10 @@ function ProjectDetails() {
 }
 
 export default ProjectDetails;
+=======
+function ProjectDetails() {
+  return <div>Project Details Page</div>;
+}
+
+export default ProjectDetails;
+>>>>>>> parent of eda1b61 (update)
