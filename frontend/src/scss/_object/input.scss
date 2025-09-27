@@ -1,0 +1,5 @@
+.form{
+    &__input{
+        @apply block w-full px-[1.2rem] py-[.6rem] font-normal leading-normal text-h5 text-[#333] bg-white border border-solid border-[#dee2e6] rounded-[.6rem]
+    }
+}
