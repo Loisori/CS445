@@ -7,7 +7,6 @@
   --font-heading: "Roboto", sans-serif;
 
   /* Font sizes */
-<<<<<<< HEAD
   --text-smallest: 0.8rem;
   --text-smaller: 1rem;
   --text-small: 1.4rem;
@@ -25,24 +24,6 @@
   --color-white: #ffffff;
   --color-transparent: transparent;
   --color-gray: #656969;
-=======
-  --text-smallest: 1.2rem;
-  --text-small: 1.3rem;
-  --text-h6: 1.4rem;
-  --text-h5: 1.6rem;
-  --text-h4: 1.8rem;
-  --text-h3: 2rem;
-  --text-h2: 2.8rem;
-  --text-h1: 3.4rem;
-
-  /* Colors */
-  --color-primary: #212529;
-  --color-secondary: #333333;
-  --color-tertiary: #212529bf;
-  --color-white: #ffffff;
-  --color-transparent: transparent;
-  --color-gray: #656969 ;
->>>>>>> parent of eda1b61 (update)
 
   /* Radius */
   --radius-0: 0;

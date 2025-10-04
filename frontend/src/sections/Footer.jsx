@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Logo from "../assets/imgs/logo.png";
 
 
@@ -49,10 +48,3 @@ function Footer() {
 }
 
 export default Footer;
-=======
-function Footer() {
-  return <footer className="footer">© 2024 My Company</footer>;
-}
-
-export default Footer;  
->>>>>>> parent of eda1b61 (update)
