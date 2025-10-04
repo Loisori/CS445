@@ -158,18 +158,8 @@ function ProjectDetails() {
         </div>
       </div>
     </div>
->>>>>>> d1668ae (update)
   );
 }
 
 export default ProjectDetails;
-<<<<<<< HEAD
-=======
-function ProjectDetails() {
-  return <div>Project Details Page</div>;
-}
 
-export default ProjectDetails;
->>>>>>> parent of eda1b61 (update)
-=======
->>>>>>> d1668ae (update)

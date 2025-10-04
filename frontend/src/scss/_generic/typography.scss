@@ -16,26 +16,15 @@ h3,
 h4,
 h5,
 h6 {
-<<<<<<< HEAD
   @apply text-black;
-=======
-  @apply text-primary;
->>>>>>> parent of eda1b61 (update)
 }
 
 p,
 span {
-<<<<<<< HEAD
   @apply text-black;
 }
 h1 {
   @apply text-h1 leading-base;
-=======
-  @apply text-secondary;
-}
-h1 {
-  @apply text-h1 lg:text-h1 leading-base tracking-tighter;
->>>>>>> parent of eda1b61 (update)
 }
 h2 {
   @apply text-h2 leading-base;
@@ -49,9 +38,6 @@ h4 {
 h5 {
   @apply text-h5;
 }
-<<<<<<< HEAD
 h6 {
   @apply text-h6;
 }
-=======
->>>>>>> parent of eda1b61 (update)
