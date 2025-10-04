@@ -10,6 +10,9 @@ const Footer = lazy(() => import("./sections/Footer.jsx"));
 
 //pages
 const Home = lazy(() => import("./pages/Home.jsx"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetails.jsx"));
+const AddForm = lazy(() => import("./pages/AddForm.jsx"));
+
 
 //login
 const Login = lazy(() => import("./pages/login/Login.jsx"));
@@ -22,8 +25,14 @@ function App() {
         <MainLayout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Register />} />
-            <Route path="/register" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/investorlogin" element={<InvestorLogin />} />
+            <Route path="/POlogin" element={<POLogin />} />
+              
+            <Route path="/detail" element={<ProjectDetail />} />
+            <Route path="/addForm" element={<AddForm />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>
