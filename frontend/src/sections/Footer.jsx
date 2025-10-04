@@ -1,13 +1,14 @@
 import Logo from "../assets/imgs/logo.png";
 
-
 function Footer() {
   return (
     <footer className="bg-primary">
       <div className="wrapper flex justify-between py-[5rem]">
         <div>
           <div className="flex gap-[2.5rem]">
-            <picture className="size-[5rem]"><img src={Logo} alt="" /></picture>
+            <picture className="size-[5rem]">
+              <img src={Logo} alt="" />
+            </picture>
             <span className="text-h3 font-bold">InvestPro</span>
           </div>
           <p className="text-h5">
@@ -41,7 +42,9 @@ function Footer() {
         </div>
       </div>
       <div className="wrapper">
-        <p className="py-[1rem] border-t-[.1rem] text-h5 text-center">© 2025 InvestPro. Tất cả quyền được bảo lưu.</p>
+        <p className="py-[1rem] border-t-[.1rem] text-h5 text-center">
+          © 2025 InvestPro. Tất cả quyền được bảo lưu.
+        </p>
       </div>
     </footer>
   );

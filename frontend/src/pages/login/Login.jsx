@@ -1,49 +1,103 @@
-import { Link } from "react-router-dom";
-
-// import BG from "./assets/imgs/loginBG.png";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:8080/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+
+        // Save token or user info in localStorage/sessionStorage
+        localStorage.setItem("token", data.token);
+
+        alert("Đăng nhập thành công!");
+        navigate("/"); // redirect to homepage (or dashboard)
+      } else {
+        const error = await res.json();
+        alert(error.message || "Đăng nhập thất bại!");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      alert("Lỗi kết nối server!");
+    }
+  };
+
   return (
     <section className="py-[20rem]!">
       <div className="min-w-[60rem] min-h-[5rem] w-fit m-auto bg-secondary py-[3rem] px-[4rem] rounded-[2rem]">
-        <form action="">
-          <h2 htmlFor="" className="mb-[3rem] text-center font-bold">
-            Đăng nhập
-          </h2>
-          <br />
+        <form onSubmit={handleSubmit}>
+          <h2 className="mb-[3rem] text-center font-bold">Đăng nhập</h2>
+
           <div className="mb-[2rem]">
-            <label htmlFor="Email" className="text-h3">
+            <label htmlFor="email" className="text-h3">
               Email
             </label>
-            <br />
             <input
-              id="Email"
-              className="w-full px-[2rem] py-[1rem] text-h5 rounded-[8px] border-[.3rem] border-solid border-[#699272]"
-              type="text"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-[2rem] py-[1rem] text-h5 rounded-[8px] border-[.3rem] border-[#699272]"
+              type="email"
               placeholder="your@gmail.com"
               required
             />
           </div>
-          <br />
+
           <div className="mb-[2rem]">
-            <label htmlFor="Password" className="text-h3">
-              Mật Khẩu
+            <label htmlFor="password" className="text-h3">
+              Mật khẩu
             </label>
-            <br />
             <input
-            className="w-full px-[2rem] py-[1rem] text-h5 rounded-[8px] border-[.3rem] border-solid border-[#699272]"
-              id="Password"
-              type="text"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              className="w-full px-[2rem] py-[1rem] text-h5 rounded-[8px] border-[.3rem] border-[#699272]"
+              type="password"
               placeholder="Nhập mật khẩu"
               required
             />
           </div>
+
           <div>
-            <button className="text-tertiary text-h4" id="js-forget-password">
+            <button
+              type="button"
+              className="text-tertiary text-h4"
+              id="js-forget-password"
+              onClick={() => alert("Chức năng quên mật khẩu chưa được hỗ trợ")}
+            >
               Quên mật khẩu?
             </button>
             <br />
-            <button className="button--primary w-full! mb-[2rem]" id="js-login" type="submit">
+            <button
+              className="button--primary w-full! mb-[2rem]"
+              id="js-login"
+              type="submit"
+            >
               Đăng nhập
             </button>
             <Link to="/register" className="text-center">

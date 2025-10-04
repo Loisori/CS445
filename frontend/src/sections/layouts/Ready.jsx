@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Ready() {
   return (
     <section>
@@ -10,9 +12,11 @@ function Ready() {
             Tham gia cùng hàng nghìn nhà đầu tư và chủ dự án đã tin tưởng
             InvestPro
           </p>
-          <button className="button--primary bg-[#B4B52D]! mx-auto mt-[2rem] block text-h6">
-            Đăng ký miễn phí
-          </button>
+          <Link to="/register">
+            <button className="button--primary bg-[#B4B52D]! mx-auto mt-[2rem] block text-h6">
+              Đăng ký miễn phí
+            </button>
+          </Link>
         </div>
       </div>
     </section>
